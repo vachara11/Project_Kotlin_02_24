@@ -45,4 +45,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // dependencies อื่นๆ
+    implementation("com.google.android.material:material:1.6.0")
+
 }
