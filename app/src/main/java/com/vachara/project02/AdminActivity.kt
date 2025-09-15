@@ -8,10 +8,13 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.widget.Toast
 import android.content.Intent
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class AdminActivity : AppCompatActivity() {
-    // ประกาศตัวแปรสำหรับอ้างอิงถึงปุ่ม logout
-    private lateinit var logoutButton: Button
+
+
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,20 +26,44 @@ class AdminActivity : AppCompatActivity() {
             insets
         }
 
-            // เชื่อมโยงตัวแปรกับ View ใน layout
-            logoutButton = findViewById(R.id.logoutButton)
 
-            // ตั้งค่า onClickListener ให้กับปุ่ม Logout
-            logoutButton.setOnClickListener {
-                // แสดง Toast แจ้งว่ากำลังล็อกเอ้าท์
-                Toast.makeText(this, "กำลังออกจากระบบ...", Toast.LENGTH_SHORT).show()
 
-                // กลับไปยังหน้า Login
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
 
-                // ปิดหน้า admin ปัจจุบัน
-                finish()
+
+
+
+            bottomNavigationView = findViewById(R.id.bottom_navigation)
+
+            // ตั้งค่า Fragment เริ่มต้น
+            if (savedInstanceState == null) {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, HomeFragment())
+                    .commit()
             }
+
+            // ตั้งค่า Listener สำหรับ Bottom Navigation
+            bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.navigation_home -> {
+                        loadFragment(HomeFragment())
+                        true
+                    }
+                    R.id.navigation_product -> {
+                        loadFragment(ProductFragment())
+                        true
+                    }
+                    R.id.navigation_add_product -> {
+                        loadFragment(AddProductFragment())
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }
+
+        private fun loadFragment(fragment: Fragment) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.container, fragment)
+                .commit()
         }
 }

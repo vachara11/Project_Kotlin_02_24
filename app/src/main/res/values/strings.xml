@@ -15,4 +15,24 @@
     <string name="home">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Swang">ร้านสว่างแก้วของชำ</string>
+    <string name="manu_product">รายการสินค้า</string>
+    <string name="name_product">ชื่อสินค้า</string>
+    <string name="price_product">ราคา: 0 บาท</string>
+    <string name="number_product">จำนวนสินค้า</string>
+    <string name="Skot">สต๊อกสินค้า ร้านสว่างแก้วของชำ</string>
+    <string name="addproductname">เพิ่มสินค้าใหม่</string>
+    <string name="addnameproduct">ชื่อสินค้า</string>
+    <string name="inputnameproduct">กรอกชื่อสินค้า</string>
+    <string name="priceproduct">ราคา</string>
+    <string name="inputpriceproduct">กรอกราคา</string>
+    <string name="btnadd">เพิ่มสินค้า</string>
+    <string name="btnreset">ล้างแบบฟอร์ม</string>
+    <string name="number">จำนวนสินค้า</string>
+    <string name="numberproduct">กรอกจำนวนสินค้า</string>
+    <string name="nameproduct">กรอกชื่อสินค้า</string>
+    <string name="editpriceproduct">ราคา</string>
+    <string name="editprice">กรอกราคา</string>
+    <string name="numberproductedit">จำนวนสินค้า</string>
+    <string name="editnumber">กรอกจำนวนสินค้า</string>
 </resources>
