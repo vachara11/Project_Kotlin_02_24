@@ -55,9 +55,7 @@
         <EditText
             android:id="@+id/editProductDescription"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:gravity="top"
-            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
             android:hint="@string/numberproduct"
             android:layout_marginBottom="24dp" />
 

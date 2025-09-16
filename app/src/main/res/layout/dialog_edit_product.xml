@@ -42,8 +42,6 @@
         android:id="@+id/editProductDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minLines="3"
-        android:gravity="top"
         android:hint="@string/editnumber" />
 
 </LinearLayout>
